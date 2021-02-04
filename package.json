@@ -1,0 +1,15 @@
+{
+  "name": "2",
+  "version": "1.0.0",
+  "description": "This script calls the pokemon api and selects a random pokemon to use a random pokemon move.",
+  "main": "pokemon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
