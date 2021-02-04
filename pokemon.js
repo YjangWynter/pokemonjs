@@ -27,11 +27,11 @@ async function printPokemon(url) {
 printPokemon(url)
 function format(pokemon) {
     //formatting the name of the pokemon to capitalize the first letter
-    pokemon.name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+    let name = capitalize(pokemon.name)
     //set a random move
     let move = randomMove(pokemon);
     //print to the console the pokemon's name and id and its random move
-    console.log(`Pokemon #${pokemon.id}, ${pokemon.name}, used ${move}!`);
+    console.log(`Pokemon #${pokemon.id}, ${name}, used ${move}!`);
 }
 
 function randomMove(pokemon) {
@@ -40,13 +40,17 @@ function randomMove(pokemon) {
     //select the move with move number
     let move_name = pokemon.moves[move_num].move.name;
     //capitalize the move name
-    move_name = move_name.charAt(0).toUpperCase() + move_name.slice(1);
+    let move = capitalize(move_name);
     //return move
-    return move_name;
+    return move;
 }
 
 function randomPokemon(pokedex) {
     let num = Math.floor((Math.random() * 156) + 1);
     let pokemon = pokedex[num].url;
     return pokemon
+}
+function capitalize(name){
+    let cap_name = name.charAt(0).toUpperCase() + name.slice(1);
+    return cap_name;
 }
