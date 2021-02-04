@@ -10,7 +10,6 @@ async function getPokemon() {
         url: pokedex
     }).then(response => response.data.results).catch((error) => console.log(`Error #1: ${error}`));
 };
-
 //     axios(pokemon).then((response) => format(response.data)).catch((error) => console.log(`Error #2: ${error}`));
 
 //selects a random url to read the pokemon's data
