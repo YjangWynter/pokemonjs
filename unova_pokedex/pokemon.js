@@ -1,3 +1,4 @@
+// original JS code
 const axios = require('axios');
 //URL for pokemon API's list of all pokemon from the Unova region
 const pokedex = 'https://pokeapi.co/api/v2/pokemon/?offset=493&limit=156/';
